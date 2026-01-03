@@ -12,7 +12,7 @@ GPT-2 Transformer Components
 → Tokens pass through attention layers to understand context
 → Output embeddings are used to predict the next token
 
-A hand-drawn control flow diagram was created to visualize this process.
+  A hand-drawn control flow diagram was created to visualize this process.
 
 3. Positional Encoding
 → Transformers do not process tokens sequentially
@@ -20,33 +20,33 @@ A hand-drawn control flow diagram was created to visualize this process.
 → Used sinusoidal functions as described in the paper
 → Added positional encodings directly to token embeddings
 
-This allows the model to distinguish between different token positions.
+  This allows the model to distinguish between different token positions.
 
 5. Single-Head Self-Attention
 
 → Each token compares itself with all other tokens
 → The model learns which tokens matter more for a given token
 
-Steps implemented:
-→ Linear projection into Query, Key, Value
-→ Scaled dot-product attention
-→ Softmax normalization
-→ Weighted aggregation of values
+  Steps implemented:
+  → Linear projection into Query, Key, Value
+  → Scaled dot-product attention
+  → Softmax normalization
+  → Weighted aggregation of values
 
-This helped build intuition before moving to multi-head attention.
+  This helped build intuition before moving to multi-head attention.
 
 5. Multi-Head Attention
 
 → Instead of one attention mechanism, multiple heads run in parallel
 → Each head learns different relationships (syntax, context, dependency)
 
-Implementation steps:
-→ Split embeddings across multiple heads
-→ Apply attention independently per head
-→ Concatenate all head outputs
-→ Project back to original embedding dimension
+  Implementation steps:
+  → Split embeddings across multiple heads
+  → Apply attention independently per head
+  → Concatenate all head outputs
+  → Project back to original embedding dimension
 
-This shows how Transformers capture multiple views of context simultaneously.
+  This shows how Transformers capture multiple views of context simultaneously.
 
 6. Key Learnings
 
